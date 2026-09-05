@@ -464,7 +464,7 @@ The project includes a functioning machine-learning forecasting pipeline, traine
 
 ## Author
 
-Developed by **Nisarga** as part of a **Future Interns  Machine Learning internship**
+Developed by **Nisarga J** as part of a **Future Interns  Machine Learning internship**
 
 ---
 
