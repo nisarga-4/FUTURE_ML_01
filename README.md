@@ -18,11 +18,18 @@ This project was developed as part of the **Future Interns Machine Learning inte
 
 ---
 
-## Live Demo
+## 🌐 Live Deployment
 
-**Live Application:** Coming Soon
+### Live Application
+https://futureml01.vercel.app/
 
-The production demo will be deployed after final repository verification.
+### Backend API
+https://future-ml-01-m3gs.onrender.com
+
+### API Health Check
+https://future-ml-01-m3gs.onrender.com/api/health
+
+> The backend is hosted on Render's free tier. The first request after a period of inactivity may take approximately 30–60 seconds while the service wakes up.
 
 ---
 
