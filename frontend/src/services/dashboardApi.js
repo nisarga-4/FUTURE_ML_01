@@ -1,4 +1,4 @@
-const API_BASE_URL = "http://127.0.0.1:8000";
+const API_BASE_URL = "https://future-ml-01-m3gs.onrender.com";
 
 async function request(endpoint) {
   const response = await fetch(

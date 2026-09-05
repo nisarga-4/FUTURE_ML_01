@@ -1,55 +1,84 @@
-# DemandIQ — Sales Demand Forecasting
+# FUTURE_ML_01 — DemandIQ
 
-DemandIQ is an end-to-end sales demand forecasting web application that combines machine learning, historical sales analytics, and an interactive dashboard to generate future demand forecasts and support data-driven business decisions.
+## Sales Demand Forecasting & Business Analytics Platform
 
-The system provides 7-day, 30-day, and 90-day demand forecasts through a FastAPI backend and a modern React dashboard.
+DemandIQ is an end-to-end machine learning application designed to forecast future sales demand and transform forecasting results into clear, actionable business insights.
 
-## Project Objectives
+The project combines a machine-learning forecasting pipeline, FastAPI backend, React frontend, historical sales analytics, model-performance monitoring, authentication, and downloadable reports in a single application.
 
-DemandIQ was developed to:
+## Internship Task information
 
-- Analyze historical sales patterns
-- Forecast future sales demand using machine learning
-- Provide 7D, 30D, and 90D forecasting horizons
-- Visualize demand trends through an interactive dashboard
-- Evaluate forecasting accuracy using standard regression metrics
-- Provide downloadable forecasting reports
-- Support user authentication and account creation
-- Help businesses make better inventory and planning decisions
+This project was developed as part of the **Future Interns Machine Learning internship**.
+
+> **Organization:** Future Interns
+> **Internship Task:** FUTURE_ML_01  
+> **Track:** Machine Learning  
+> **Project:** Sales Demand Forecasting  
+> **Status:** Completed
+
+---
+
+## Live Demo
+
+**Live Application:** Coming Soon
+
+The production demo will be deployed after final repository verification.
+
+---
+
+## Project Overview
+
+Businesses need reliable demand estimates to plan inventory, understand sales trends, reduce uncertainty, and make better operational decisions.
+
+DemandIQ addresses this problem by analyzing historical sales data and generating future demand forecasts for multiple forecasting horizons.
+
+The application supports:
+
+- 7-day demand forecasting
+- 30-day demand forecasting
+- 90-day demand forecasting
+- Historical sales analytics
+- Interactive forecast visualization
+- Model-performance monitoring
+- Forecast report generation
+- CSV report downloads
+- User authentication and account creation
+
+---
 
 ## Key Features
 
 ### Demand Forecasting
 
-The application generates future sales forecasts for:
+DemandIQ generates future sales forecasts for:
 
-- 7 Days
-- 30 Days
-- 90 Days
+- **7 Days**
+- **30 Days**
+- **90 Days**
 
-Forecasts are generated dynamically through the backend forecasting service.
+Forecasts are generated using the trained machine-learning forecasting pipeline.
 
 ### Interactive Dashboard
 
-The DemandIQ dashboard displays:
+The dashboard provides a high-level overview of:
 
 - Forecasted sales demand
 - Average demand
 - Peak demand
 - Minimum demand
 - Demand trend
-- Model R² score
+- R² score
 - MAPE
 - RMSE
-- Model health status
+- Model health
 
 ### Sales Analytics
 
-The Sales Analytics module provides visual analysis of historical and forecasted sales data, including multiple time horizons and demand trends.
+The Sales Analytics module provides visual analysis of historical and forecasted demand, helping users understand sales behavior and future trends.
 
 ### Model Performance
 
-The Model Performance page presents forecasting evaluation metrics including:
+The application provides dedicated model-performance monitoring using:
 
 - R² Score
 - Mean Absolute Percentage Error (MAPE)
@@ -58,36 +87,74 @@ The Model Performance page presents forecasting evaluation metrics including:
 
 ### Reports
 
-Users can view forecasting summaries and export forecast information as CSV reports.
+DemandIQ provides forecasting summaries and downloadable CSV reports for further analysis.
 
 ### Authentication
 
-DemandIQ includes a SQLite-based authentication system with:
+The application includes a SQLite-based authentication system with:
 
 - User sign-in
 - Account creation
 - Password hashing
 - User profile information
-- Session information stored by the frontend
+- User status
 - Logout functionality
+
+---
 
 ## Machine Learning Model
 
-DemandIQ uses an ensemble forecasting approach built with Scikit-learn.
+DemandIQ uses an ensemble forecasting approach implemented with Scikit-learn.
 
-The forecasting system uses three `HistGradientBoostingRegressor` models and generates future predictions recursively using historical and derived forecasting features.
+The final forecasting system combines three `HistGradientBoostingRegressor` models.
+
+Future demand is generated recursively using historical and derived forecasting features.
 
 ### Model Performance
 
 | Metric | Result |
 | --- | ---: |
-| R² Score | 0.9561 / 95.61% |
-| MAPE | 3.13% |
-| RMSE | 31,877 |
-| MAE | 23,465 |
-| Validation Period | 60 Days |
+| R² Score | **95.61%** |
+| MAPE | **3.13%** |
+| RMSE | **31,877** |
+| MAE | **23,465** |
+| Validation Period | **60 Days** |
 
-These metrics are based on the final trained forecasting model used by the application.
+The final model achieved an R² score of **0.9561**, indicating strong predictive performance on the validation period.
+
+---
+
+## Application Screenshots
+
+### Landing Page
+
+![DemandIQ Landing Page](screenshots/01-landing-page.png)
+
+### Sign In
+
+![DemandIQ Sign In](screenshots/02-sign-in.png)
+
+### Dashboard Overview
+
+![DemandIQ Dashboard](screenshots/03-dashboard.png)
+
+### Sales Analytics
+
+![DemandIQ Sales Analytics](screenshots/04-sales-analytics.png)
+
+### Demand Forecast
+
+![DemandIQ Demand Forecast](screenshots/05-demand-forecast.png)
+
+### Model Performance
+
+![DemandIQ Model Performance](screenshots/06-model-performance.png)
+
+### Reports
+
+![DemandIQ Reports](screenshots/07-reports.png)
+
+---
 
 ## Technology Stack
 
@@ -115,21 +182,70 @@ These metrics are based on the final trained forecasting model used by the appli
 - NumPy
 - Joblib
 
+### Development Tools
+
+- Visual Studio Code
+- Git
+- GitHub
+
+---
+
+## Project Architecture
+
+```text
+Historical Sales Data
+        │
+        ▼
+Data Cleaning & Processing
+        │
+        ▼
+Feature Engineering
+        │
+        ▼
+ML Model Training
+        │
+        ▼
+HistGradientBoosting Ensemble
+        │
+        ▼
+Recursive Demand Forecasting
+        │
+        ▼
+FastAPI Backend
+        │
+        ▼
+React Frontend
+        │
+        ├── Dashboard
+        ├── Sales Analytics
+        ├── Demand Forecast
+        ├── Model Performance
+        └── Reports
+```
+
+---
+
 ## Project Structure
 
 ```text
-Sales-Demand-Forecasting-V2/
+FUTURE_ML_01/
 │
 ├── backend/
-│   ├── main.py
-│   ├── model_service.py
 │   ├── database.py
 │   ├── demandiq.db
+│   ├── main.py
+│   ├── model_service.py
 │   └── requirements.txt
+│
+├── data/
+│   ├── processed/
+│   │   └── daily_sales.csv
+│   └── raw/
 │
 ├── frontend/
 │   ├── public/
 │   ├── src/
+│   │   ├── assets/
 │   │   ├── components/
 │   │   ├── pages/
 │   │   ├── services/
@@ -138,95 +254,97 @@ Sales-Demand-Forecasting-V2/
 │   ├── package.json
 │   └── vite.config.js
 │
-├── data/
-│   └── processed/
-│       └── daily_sales.csv
-│
 ├── models/
 │   └── final_sales_forecasting_model.joblib
 │
 ├── outputs/
 │   ├── forecasts/
-│   └── metrics/
+│   ├── metrics/
+│   └── plots/
 │
-└── README.md
+├── screenshots/
+│
+├── src/
+│   ├── clean_data.py
+│   ├── forecast.py
+│   ├── train_model.py
+│   └── visualize_forecast.py
+│
+├── .gitignore
+├── README.md
+└── requirements.txt
 ```
+
+> The original raw training CSV is excluded from the Git repository because it exceeds GitHub's standard individual-file size limit. The processed dataset required by the application is included.
+
+---
 
 ## Installation
 
-### 1. Clone or Download the Project
-
-Open the project directory:
+### 1. Clone the Repository
 
 ```bash
-cd Sales-Demand-Forecasting-V2
+git clone https://github.com/nisarga-4/FUTURE_ML_01.git
+cd FUTURE_ML_01
 ```
 
 ### 2. Install Backend Dependencies
 
-Navigate to the backend:
-
 ```bash
 cd backend
-```
-
-Install the required Python packages:
-
-```bash
 pip install -r requirements.txt
 ```
 
-### 3. Start the Backend
-
-From the `backend` directory:
+### 3. Start the FastAPI Backend
 
 ```bash
 python -m uvicorn main:app --reload
 ```
 
-The API will run locally on port `8000`.
+The backend runs locally on port `8000`.
 
-FastAPI interactive API documentation is available at `/docs` while the backend is running.
+FastAPI interactive API documentation is available at:
+
+```text
+http://127.0.0.1:8000/docs
+```
 
 ### 4. Install Frontend Dependencies
 
-Open another terminal and navigate to the frontend:
+Open another terminal:
 
 ```bash
 cd frontend
-```
-
-Install dependencies:
-
-```bash
 npm install
 ```
 
-### 5. Start the Frontend
+### 5. Start the React Frontend
 
 ```bash
 npm run dev
 ```
 
-Open the local address displayed by Vite in your browser.
+Open the local URL displayed by Vite in your browser.
+
+---
 
 ## API Endpoints
 
-The FastAPI backend provides endpoints for:
+| Method | Endpoint | Purpose |
+| --- | --- | --- |
+| GET | `/api/health` | Backend health check |
+| GET | `/api/dashboard` | Dashboard and forecast summary |
+| GET | `/api/forecast` | Future demand forecast |
+| GET | `/api/historical` | Historical sales information |
+| GET | `/api/model/metrics` | ML model evaluation metrics |
+| POST | `/api/login` | User authentication |
+| POST | `/api/users` | User account creation |
 
-| Endpoint | Purpose |
-| --- | --- |
-| `GET /api/health` | Backend health check |
-| `GET /api/dashboard` | Dashboard and forecast summary |
-| `GET /api/forecast` | Future demand forecast |
-| `GET /api/historical` | Historical sales data |
-| `GET /api/model/metrics` | ML model evaluation metrics |
-| `POST /api/login` | User authentication |
-| `POST /api/users` | Create a user account |
+---
 
 ## Application Modules
 
-DemandIQ contains the following main pages:
+DemandIQ consists of the following primary modules:
 
 1. Landing Page
 2. Sign In / Create Account
@@ -237,7 +355,9 @@ DemandIQ contains the following main pages:
 7. Reports
 8. Settings
 
-## Forecast Workflow
+---
+
+## Forecasting Workflow
 
 ```text
 Historical Sales Data
@@ -246,47 +366,77 @@ Data Processing
         ↓
 Feature Engineering
         ↓
-Trained ML Ensemble
+Model Training
         ↓
-Recursive Forecast Generation
+Ensemble Forecasting Model
         ↓
-FastAPI Backend
+Recursive Future Prediction
+        ↓
+FastAPI Services
         ↓
 React Dashboard
         ↓
 Analytics & Reports
 ```
 
+---
+
 ## Business Value
 
-DemandIQ is designed to support better business decisions by helping users:
+DemandIQ is designed to help businesses:
 
-- Predict future demand
-- Identify sales trends
-- Plan inventory requirements
-- Reduce stock-related risk
+- Predict future sales demand
+- Understand historical sales behavior
+- Identify demand trends
+- Improve inventory planning
+- Reduce stock-related uncertainty
 - Monitor forecasting accuracy
-- Convert forecasting results into understandable visual insights
+- Convert ML predictions into understandable business insights
+
+---
 
 ## Future Improvements
 
-Potential future enhancements include:
+Potential enhancements include:
 
-- Cloud deployment
-- Role-based backend authorization
-- Automated model retraining
 - Real-time sales data integration
-- Product-level forecasting
-- Store-level forecasting
+- Automated model retraining
+- Product-level demand forecasting
+- Store-level demand forecasting
+- Cloud-based persistent authentication
 - Advanced inventory recommendations
 - Forecast alerts and notifications
+- Automated anomaly detection
+- Production-scale model monitoring
+
+---
+
+## Repository Information
+
+This repository was created according to the Machine Learning internship task submission format.
+
+**Repository:** `FUTURE_ML_01`
+
+**Task:** Sales Demand Forecasting
+
+**Track:** Machine Learning
+
+---
 
 ## Project Status
 
 **Completed**
 
-The application includes a functioning machine-learning forecasting pipeline, FastAPI backend, SQLite authentication system, React frontend, analytics dashboard, forecast visualization, model-performance monitoring, and report generation.
+The project includes a functioning machine-learning forecasting pipeline, trained forecasting model, FastAPI backend, SQLite authentication system, React frontend, analytics dashboard, forecast visualization, model-performance monitoring, downloadable reports, and project documentation.
+
+---
 
 ## Author
 
-Developed as an internship project for sales demand forecasting and business analytics.
+Developed by **Nisarga** as part of a **Future Interns  Machine Learning internship**
+
+---
+
+## License
+
+This project is intended for educational and internship evaluation purposes.
