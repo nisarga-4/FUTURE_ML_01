@@ -193,8 +193,7 @@ app.add_middleware(
     CORSMiddleware,
 
     allow_origins=[
-        "https://futureml01.vercel.app/",
-    ],
+        "https://futureml01.vercel.app/"],
 
     allow_credentials=True,
 
