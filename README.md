@@ -129,6 +129,25 @@ Future demand is generated recursively using historical and derived forecasting 
 
 The final model achieved an R² score of **0.9561**, indicating strong predictive performance on the validation period.
 
+## Forecast Visualization
+
+Matplotlib was used during the machine learning analysis and evaluation stage to visualize historical sales alongside the model's future demand predictions.
+
+The visualization below compares historical daily sales with the generated 30-day demand forecast and highlights the beginning of the forecast period.
+
+![Historical Sales vs Future Demand Forecast](screenshots/08-matplotlib-forecast.png)
+
+### Forecast Summary
+
+- **R² Score:** 0.9561
+- **MAPE:** 3.13%
+- **RMSE:** 31,877.44
+- **30-Day Forecast Average:** 857,138
+- **Minimum Forecast:** 788,494
+- **Maximum Forecast:** 967,047
+
+The deployed DemandIQ application presents these forecasting results through its own interactive React-based business dashboard, while Matplotlib was used for model analysis and standalone forecast visualization.
+
 ---
 ## Business Interpretation of the Forecast
 
