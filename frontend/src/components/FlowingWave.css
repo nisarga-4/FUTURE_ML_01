@@ -1,0 +1,194 @@
+.flowing-wave {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.flowing-wave__svg {
+  position: absolute;
+  width: 118%;
+  height: 100%;
+  left: -9%;
+  top: 0;
+  overflow: visible;
+  opacity: 0.95;
+}
+
+.wave-line {
+  stroke-linecap: round;
+  transform-origin: center;
+  will-change: transform, opacity;
+}
+
+.wave-line-0 {
+  animation: waveDriftOne 6s ease-in-out infinite alternate;
+}
+
+.wave-line-1 {
+  animation: waveDriftTwo 7s ease-in-out infinite alternate;
+}
+
+.wave-line-2 {
+  animation: waveDriftThree 8s ease-in-out infinite alternate;
+}
+
+.wave-line-3 {
+  animation: waveDriftOne 9s ease-in-out infinite alternate-reverse;
+}
+
+.wave-line-4 {
+  animation: waveDriftTwo 10s ease-in-out infinite alternate-reverse;
+}
+
+.flowing-wave__glow {
+  position: absolute;
+  border-radius: 999px;
+  filter: blur(90px);
+  opacity: 0.18;
+  will-change: transform;
+}
+
+.flowing-wave__glow--cyan {
+  width: 420px;
+  height: 220px;
+  left: 2%;
+  bottom: 3%;
+  background: #12d9ff;
+  animation: glowFloatOne 9s ease-in-out infinite alternate;
+}
+
+.flowing-wave__glow--lime {
+  width: 360px;
+  height: 180px;
+  left: 38%;
+  bottom: 6%;
+  background: #d9ff3f;
+  animation: glowFloatTwo 11s ease-in-out infinite alternate;
+}
+
+.flowing-wave__glow--purple {
+  width: 460px;
+  height: 220px;
+  right: -3%;
+  bottom: 10%;
+  background: #8b4dff;
+  animation: glowFloatThree 13s ease-in-out infinite alternate;
+}
+
+@keyframes waveDriftOne {
+  0% {
+    transform: translate3d(-3%, 4px, 0) scaleY(0.94);
+  }
+
+  50% {
+    transform: translate3d(0%, -10px, 0) scaleY(1.05);
+  }
+
+  100% {
+    transform: translate3d(3%, 5px, 0) scaleY(0.98);
+  }
+}
+
+@keyframes waveDriftTwo {
+  0% {
+    transform: translate3d(3%, -5px, 0) scaleY(1.04);
+  }
+
+  50% {
+    transform: translate3d(0%, 10px, 0) scaleY(0.95);
+  }
+
+  100% {
+    transform: translate3d(-3%, -3px, 0) scaleY(1.03);
+  }
+}
+
+@keyframes waveDriftThree {
+  0% {
+    transform: translate3d(-2%, -7px, 0) scaleY(1);
+  }
+
+  50% {
+    transform: translate3d(2%, 8px, 0) scaleY(1.08);
+  }
+
+  100% {
+    transform: translate3d(-1%, -4px, 0) scaleY(0.96);
+  }
+}
+
+@keyframes glowFloatOne {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+
+  to {
+    transform: translate3d(80px, -25px, 0);
+  }
+}
+
+@keyframes glowFloatTwo {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+
+  to {
+    transform: translate3d(-55px, -20px, 0);
+  }
+}
+
+@keyframes glowFloatThree {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+
+  to {
+    transform: translate3d(-70px, 22px, 0);
+  }
+}
+
+@media (max-width: 900px) {
+  .flowing-wave__svg {
+    width: 150%;
+    left: -25%;
+  }
+
+  .flowing-wave__glow {
+    opacity: 0.13;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .wave-line,
+  .flowing-wave__glow {
+    animation: none;
+  }
+}
+.hero-bg-wave .flowing-wave {
+  height: 190px;
+}
+
+.hero-bg-wave .flowing-wave__svg {
+  height: 260px;
+  top: -20px;
+}
+.hero-bg-wave .flowing-wave__svg {
+  animation: waveTravel 7s ease-in-out infinite alternate;
+  will-change: transform;
+}
+
+@keyframes waveTravel {
+  0% {
+    transform: translateX(-3%) translateY(0) scaleX(1.02);
+  }
+
+  50% {
+    transform: translateX(0%) translateY(-6px) scaleX(1.04);
+  }
+
+  100% {
+    transform: translateX(3%) translateY(3px) scaleX(1.02);
+  }
+}

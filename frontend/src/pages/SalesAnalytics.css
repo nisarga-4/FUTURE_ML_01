@@ -1,0 +1,262 @@
+.sales-analytics-page {
+  display: grid;
+  gap: 24px;
+}
+
+.analytics-page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+
+  gap: 30px;
+}
+
+.analytics-page-kicker {
+  color: #12d9ff;
+
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+}
+
+.analytics-page-header h2 {
+  margin: 8px 0 7px;
+
+  font-size: 30px;
+  letter-spacing: -1.2px;
+}
+
+.analytics-page-header p {
+  max-width: 600px;
+
+  margin: 0;
+
+  color: #768286;
+
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+.analytics-period-button {
+  height: 42px;
+
+  padding: 0 14px;
+
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  border: 1px solid rgba(255,255,255,.08);
+  border-radius: 9px;
+
+  background: #080c0d;
+
+  color: #9aa5a8;
+
+  font-size: 10px;
+}
+
+.analytics-kpis {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 12px;
+}
+
+.analytics-kpis article {
+  min-height: 115px;
+
+  display: flex;
+  align-items: center;
+  gap: 14px;
+
+  padding: 18px;
+
+  border: 1px solid rgba(255,255,255,.075);
+  border-radius: 13px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #0b0f10,
+      #070a0b
+    );
+}
+
+.analytics-kpi-icon {
+  width: 43px;
+  height: 43px;
+
+  flex: 0 0 auto;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 11px;
+}
+
+.analytics-kpi-icon.cyan {
+  color: #12d9ff;
+  background: rgba(18,217,255,.08);
+}
+
+.analytics-kpi-icon.lime {
+  color: #d9ff3f;
+  background: rgba(217,255,63,.07);
+}
+
+.analytics-kpis span,
+.analytics-kpis strong,
+.analytics-kpis small {
+  display: block;
+}
+
+.analytics-kpis span {
+  color: #798589;
+  font-size: 9px;
+}
+
+.analytics-kpis strong {
+  margin-top: 4px;
+
+  color: white;
+
+  font-size: 20px;
+}
+
+.analytics-kpis small {
+  margin-top: 5px;
+
+  color: #566166;
+
+  font-size: 8px;
+}
+
+.analytics-positive {
+  display: flex !important;
+  align-items: center;
+
+  gap: 3px;
+
+  color: #a8ef54 !important;
+}
+
+.sales-analytics-grid {
+  display: grid;
+
+  grid-template-columns: 1.45fr .7fr;
+
+  gap: 14px;
+}
+
+.analytics-card {
+  min-width: 0;
+
+  padding: 22px;
+
+  border: 1px solid rgba(255,255,255,.075);
+  border-radius: 15px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #0b0f10,
+      #06090a
+    );
+}
+
+.analytics-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  gap: 20px;
+}
+
+.analytics-card-header span {
+  color: #12d9ff;
+
+  font-size: 8px;
+  font-weight: 800;
+
+  letter-spacing: 1.2px;
+}
+
+.analytics-card-header h3 {
+  margin: 6px 0 0;
+
+  font-size: 14px;
+}
+
+.analytics-live {
+  padding: 7px 10px;
+
+  display: flex;
+  align-items: center;
+  gap: 6px;
+
+  border: 1px solid rgba(89,232,109,.12);
+  border-radius: 999px;
+
+  color: #94ef61 !important;
+
+  background: rgba(89,232,109,.05);
+
+  letter-spacing: 0 !important;
+}
+
+.analytics-live i {
+  width: 6px;
+  height: 6px;
+
+  border-radius: 50%;
+
+  background: #91f333;
+
+  box-shadow:
+    0 0 9px rgba(145,243,51,.45);
+}
+
+.recharts-wrapper-large {
+  width: 100%;
+  height: 410px;
+
+  margin-top: 22px;
+}
+
+.recharts-wrapper-small {
+  width: 100%;
+  height: 410px;
+
+  margin-top: 22px;
+}
+
+.recharts-default-legend {
+  font-size: 10px !important;
+}
+
+@media (max-width: 1150px) {
+  .analytics-kpis {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .sales-analytics-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 650px) {
+  .analytics-page-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .analytics-kpis {
+    grid-template-columns: 1fr;
+  }
+
+  .analytics-period-button {
+    width: 100%;
+    justify-content: center;
+  }
+}

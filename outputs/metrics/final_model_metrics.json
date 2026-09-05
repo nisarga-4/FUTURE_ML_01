@@ -1,0 +1,18 @@
+{
+    "model_type": "Seasonal HistGradientBoosting Blend",
+    "R2": 0.9561272854772924,
+    "MAPE_percent": 3.1288850908090193,
+    "MAE": 26428.53725146982,
+    "RMSE": 31877.441962896548,
+    "blend_weights": {
+        "SEASON_HGB_A": 0.5,
+        "SEASON_HGB_C": 0.47500000000000003,
+        "SEASON_HGB_B": 0.024999999999999967
+    },
+    "top_three": [
+        "SEASON_HGB_A",
+        "SEASON_HGB_C",
+        "SEASON_HGB_B"
+    ],
+    "validation_days": 60
+}

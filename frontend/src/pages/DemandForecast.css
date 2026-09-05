@@ -1,0 +1,278 @@
+.forecast-page {
+  display: grid;
+  gap: 20px;
+}
+
+.forecast-page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 30px;
+}
+
+.forecast-kicker {
+  color: #12d9ff;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+}
+
+.forecast-page-header h2 {
+  margin: 8px 0 7px;
+  font-size: 31px;
+  letter-spacing: -1.4px;
+}
+
+.forecast-page-header p {
+  margin: 0;
+  color: #758084;
+  font-size: 12px;
+}
+
+.forecast-download {
+  height: 42px;
+  padding: 0 15px;
+
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  border: none;
+  border-radius: 9px;
+
+  background: #d9ff3f;
+  color: #061006;
+
+  font-size: 10px;
+  font-weight: 800;
+
+  cursor: pointer;
+}
+
+.forecast-control-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 17px;
+
+  border: 1px solid rgba(255,255,255,.075);
+  border-radius: 12px;
+
+  background: #080c0d;
+}
+
+.forecast-control-card span,
+.forecast-control-card strong {
+  display: block;
+}
+
+.forecast-control-card span {
+  color: #647074;
+  font-size: 8px;
+}
+
+.forecast-control-card strong {
+  margin-top: 4px;
+  font-size: 11px;
+}
+
+.forecast-horizon-buttons {
+  display: flex;
+  gap: 6px;
+}
+
+.forecast-horizon-buttons button {
+  padding: 8px 13px;
+
+  border: 1px solid rgba(255,255,255,.08);
+  border-radius: 7px;
+
+  background: #050809;
+  color: #687478;
+
+  font-size: 9px;
+
+  cursor: pointer;
+}
+
+.forecast-horizon-buttons button.active {
+  background: #d9ff3f;
+  border-color: #d9ff3f;
+  color: #061006;
+}
+
+.forecast-kpis {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+.forecast-kpis article {
+  min-height: 105px;
+
+  display: flex;
+  align-items: center;
+  gap: 13px;
+
+  padding: 17px;
+
+  border: 1px solid rgba(255,255,255,.075);
+  border-radius: 12px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #0b0f10,
+      #06090a
+    );
+
+  color: #12d9ff;
+}
+
+.forecast-kpis article:nth-child(even) {
+  color: #d9ff3f;
+}
+
+.forecast-kpis span,
+.forecast-kpis strong {
+  display: block;
+}
+
+.forecast-kpis span {
+  color: #697579;
+  font-size: 8px;
+}
+
+.forecast-kpis strong {
+  margin-top: 4px;
+  color: white;
+  font-size: 18px;
+}
+
+.forecast-chart-card {
+  padding: 22px;
+
+  border: 1px solid rgba(255,255,255,.075);
+  border-radius: 15px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #0b0f10,
+      #06090a
+    );
+}
+
+.forecast-chart-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.forecast-chart-heading span {
+  color: #12d9ff;
+  font-size: 8px;
+  font-weight: 800;
+  letter-spacing: 1.3px;
+}
+
+.forecast-chart-heading h3 {
+  margin: 6px 0 0;
+  font-size: 15px;
+}
+
+.forecast-live-status {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+
+  padding: 7px 10px;
+
+  border: 1px solid rgba(89,232,109,.12);
+  border-radius: 999px;
+
+  background: rgba(89,232,109,.05);
+
+  color: #92ef61;
+  font-size: 8px;
+  font-weight: 700;
+}
+
+.forecast-live-status i {
+  width: 6px;
+  height: 6px;
+
+  border-radius: 50%;
+
+  background: #8ff131;
+
+  box-shadow:
+    0 0 9px rgba(143,241,49,.5);
+}
+
+.forecast-chart-area {
+  height: 430px;
+  margin-top: 20px;
+}
+
+.forecast-bottom-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.forecast-bottom-grid article {
+  padding: 18px;
+
+  border: 1px solid rgba(255,255,255,.07);
+  border-radius: 12px;
+
+  background: #080c0d;
+}
+
+.forecast-bottom-grid span,
+.forecast-bottom-grid strong {
+  display: block;
+}
+
+.forecast-bottom-grid span {
+  color: #667276;
+  font-size: 8px;
+}
+
+.forecast-bottom-grid strong {
+  margin-top: 5px;
+  font-size: 18px;
+}
+
+.forecast-bottom-grid p {
+  margin: 8px 0 0;
+
+  color: #566166;
+  font-size: 8px;
+  line-height: 1.6;
+}
+
+.forecast-green {
+  color: #a6ef54;
+}
+
+@media (max-width: 1000px) {
+  .forecast-kpis {
+    grid-template-columns: repeat(2,1fr);
+  }
+}
+
+@media (max-width: 650px) {
+  .forecast-page-header,
+  .forecast-control-card {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .forecast-kpis,
+  .forecast-bottom-grid {
+    grid-template-columns: 1fr;
+  }
+}

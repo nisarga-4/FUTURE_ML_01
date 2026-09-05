@@ -1,0 +1,160 @@
+{
+    "model": {
+        "type": "seasonal_hgb_blend",
+        "R2": 0.9561272854772924,
+        "MAPE": 3.1288850908090193,
+        "RMSE": 31877.441962896548
+    },
+    "forecast": [
+        {
+            "date": "2017-08-16",
+            "forecast_day": 1,
+            "predicted_sales": 858367.05
+        },
+        {
+            "date": "2017-08-17",
+            "forecast_day": 2,
+            "predicted_sales": 791631.01
+        },
+        {
+            "date": "2017-08-18",
+            "forecast_day": 3,
+            "predicted_sales": 822092.05
+        },
+        {
+            "date": "2017-08-19",
+            "forecast_day": 4,
+            "predicted_sales": 850472.47
+        },
+        {
+            "date": "2017-08-20",
+            "forecast_day": 5,
+            "predicted_sales": 931011.57
+        },
+        {
+            "date": "2017-08-21",
+            "forecast_day": 6,
+            "predicted_sales": 864794.87
+        },
+        {
+            "date": "2017-08-22",
+            "forecast_day": 7,
+            "predicted_sales": 836647.42
+        },
+        {
+            "date": "2017-08-23",
+            "forecast_day": 8,
+            "predicted_sales": 842342.36
+        },
+        {
+            "date": "2017-08-24",
+            "forecast_day": 9,
+            "predicted_sales": 788494.07
+        },
+        {
+            "date": "2017-08-25",
+            "forecast_day": 10,
+            "predicted_sales": 819804.16
+        },
+        {
+            "date": "2017-08-26",
+            "forecast_day": 11,
+            "predicted_sales": 845499.67
+        },
+        {
+            "date": "2017-08-27",
+            "forecast_day": 12,
+            "predicted_sales": 967046.6
+        },
+        {
+            "date": "2017-08-28",
+            "forecast_day": 13,
+            "predicted_sales": 872409.6
+        },
+        {
+            "date": "2017-08-29",
+            "forecast_day": 14,
+            "predicted_sales": 878512.58
+        },
+        {
+            "date": "2017-08-30",
+            "forecast_day": 15,
+            "predicted_sales": 886840.41
+        },
+        {
+            "date": "2017-08-31",
+            "forecast_day": 16,
+            "predicted_sales": 839261.22
+        },
+        {
+            "date": "2017-09-01",
+            "forecast_day": 17,
+            "predicted_sales": 859981.11
+        },
+        {
+            "date": "2017-09-02",
+            "forecast_day": 18,
+            "predicted_sales": 864904.91
+        },
+        {
+            "date": "2017-09-03",
+            "forecast_day": 19,
+            "predicted_sales": 958093.44
+        },
+        {
+            "date": "2017-09-04",
+            "forecast_day": 20,
+            "predicted_sales": 882328.15
+        },
+        {
+            "date": "2017-09-05",
+            "forecast_day": 21,
+            "predicted_sales": 871343.19
+        },
+        {
+            "date": "2017-09-06",
+            "forecast_day": 22,
+            "predicted_sales": 856621.13
+        },
+        {
+            "date": "2017-09-07",
+            "forecast_day": 23,
+            "predicted_sales": 791990.47
+        },
+        {
+            "date": "2017-09-08",
+            "forecast_day": 24,
+            "predicted_sales": 815337.97
+        },
+        {
+            "date": "2017-09-09",
+            "forecast_day": 25,
+            "predicted_sales": 838183.11
+        },
+        {
+            "date": "2017-09-10",
+            "forecast_day": 26,
+            "predicted_sales": 923170.32
+        },
+        {
+            "date": "2017-09-11",
+            "forecast_day": 27,
+            "predicted_sales": 860146.61
+        },
+        {
+            "date": "2017-09-12",
+            "forecast_day": 28,
+            "predicted_sales": 839098.08
+        },
+        {
+            "date": "2017-09-13",
+            "forecast_day": 29,
+            "predicted_sales": 847925.16
+        },
+        {
+            "date": "2017-09-14",
+            "forecast_day": 30,
+            "predicted_sales": 809777.21
+        }
+    ]
+}
