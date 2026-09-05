@@ -130,6 +130,30 @@ Future demand is generated recursively using historical and derived forecasting 
 The final model achieved an R² score of **0.9561**, indicating strong predictive performance on the validation period.
 
 ---
+## Business Interpretation of the Forecast
+
+### What Does the Forecast Mean?
+
+DemandIQ predicts the expected future sales demand based on historical sales patterns, trends, seasonality, and time-based features.
+
+The forecast helps estimate how much demand a business can expect over upcoming days. Users can view different forecast horizons such as 7, 30, and 90 days to understand both short-term and longer-term demand patterns.
+
+Higher predicted values indicate periods where stronger customer demand is expected, while lower predicted values indicate periods of relatively lower demand.
+
+### How Can a Business Use the Forecast?
+
+Businesses can use these predictions to make better planning decisions, including:
+
+- **Inventory Planning:** Maintain sufficient stock during predicted high-demand periods and reduce excess inventory during lower-demand periods.
+- **Staffing:** Schedule additional employees when higher sales activity is expected.
+- **Purchasing:** Plan supplier orders based on anticipated future demand.
+- **Budgeting:** Use expected sales patterns to support financial and operational planning.
+- **Promotions:** Identify lower-demand periods where marketing campaigns or promotions may be useful.
+- **Resource Allocation:** Prepare business resources in advance for expected peaks and changes in demand.
+
+DemandIQ transforms the model's predictions into business-friendly visualizations so that store owners, startup founders, and business managers can use the forecast for practical decision-making.
+
+---
 
 ## Application Screenshots
 
